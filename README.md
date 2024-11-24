@@ -1,2 +1,3 @@
-# ProgrammazioneDistribuita
-Esercizi per l'esame di Programmazione Distribuita UNISA 2024/2025
+# ProgrammazioneDistribuita template
+
+1. crea una clinca
