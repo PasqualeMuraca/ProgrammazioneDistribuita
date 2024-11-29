@@ -6,5 +6,9 @@
             <file>file:/C:/Users/CORSO_PD/Documents/progettimiei/BabboNatale/BabboNataleEJB/src/java/babbonatale/BabboNataleController.java</file>
             <file>file:/C:/Users/CORSO_PD/Documents/progettimiei/BabboNatale/BabboNataleEJB/src/java/databaseproducer/DatabasePopulator.java</file>
         </group>
+        <group name="progetti miei">
+            <file>file:/C:/Users/CORSO_PD/Documents/progettimiei/BabboNatale/BabboNataleEJB/src/conf/persistence.xml</file>
+            <file>file:/C:/Users/CORSO_PD/Documents/progettimiei/BabboNatale/BabboNataleEJB/src/java/babbonatale/Bambino.java</file>
+        </group>
     </open-files>
 </project-private>

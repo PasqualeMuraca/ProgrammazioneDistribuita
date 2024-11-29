@@ -1,8 +1,6 @@
 package babbonatale;
 
-import static babbonatale.Bambino.FIND_ALL;
-import static babbonatale.Bambino.FIND_BY_REQUEST;
-import static babbonatale.Bambino.FIND_NUCLEO;
+import static babbonatale.Bambino.*;
 import java.util.List;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -53,5 +51,12 @@ public class BabboNataleController implements BabboNataleRemote {
         TypedQuery<Bambino> query =
         em.createNamedQuery(FIND_ALL, Bambino.class);
         return query.getResultList();
+    }
+
+    @Override
+    public Bambino findBambinoById(int id) {
+        return em.createNamedQuery(FIND_BY_ID, Bambino.class)
+                .setParameter("id", id)
+                .getSingleResult();
     }
 }

@@ -1,8 +1,6 @@
 package babbonatale;
 
-import static babbonatale.Bambino.FIND_ALL;
-import static babbonatale.Bambino.FIND_BY_REQUEST;
-import static babbonatale.Bambino.FIND_NUCLEO;
+import static babbonatale.Bambino.*;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +13,9 @@ import javax.persistence.NamedQuery;
 @NamedQueries({
     @NamedQuery(name = FIND_ALL, query = "Select b FROM Bambino b"),
     @NamedQuery(name = FIND_BY_REQUEST, query = "SELECT b FROM Bambino b WHERE b.stato = false"),
-    @NamedQuery(name = FIND_NUCLEO, query = "SELECT b FROM Bambino b WHERE b.nucleo > :nucleoMinimo")
+    @NamedQuery(name = FIND_NUCLEO, query = "SELECT b FROM Bambino b WHERE b.nucleo > :nucleoMinimo"),
+    @NamedQuery(name = FIND_BY_ID, query = "SELECT b FROM Bambino b WHERE b.id > :id")
+    
 }
 )
 public class Bambino implements Serializable {
@@ -23,6 +23,7 @@ public class Bambino implements Serializable {
     public static final String FIND_ALL = "Bambino.findAllBambini";
     public static final String FIND_BY_REQUEST = "Bambino.findBambiniByStato";
     public static final String FIND_NUCLEO = "Bambino.findBambiniByNucleo";
+    public static final String FIND_BY_ID = "Bambino.findBambiniById";
     
     private static final long serialVersionUID = 1L;
     @Id
