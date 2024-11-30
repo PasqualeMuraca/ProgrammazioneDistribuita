@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package enoteca;
+package server;
 
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.*;
-import static enoteca.Vino.*;
+import static server.Vino.*;
 /**
  *
  * @author CORSO_PD

@@ -1,10 +1,10 @@
-package enoteca;
+package server;
 
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.7.7.v20200504-rNA", date="2024-11-24T23:28:43")
+@Generated(value="EclipseLink-2.7.7.v20200504-rNA", date="2024-11-30T23:13:56")
 @StaticMetamodel(Vino.class)
 public class Vino_ { 
 

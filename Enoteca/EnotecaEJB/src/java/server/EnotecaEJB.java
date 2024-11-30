@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package enoteca;
+package server;
 
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.*;
 import javax.persistence.*;
 
-import static enoteca.Vino.*;
+import static server.Vino.*;
 import javax.ejb.LocalBean;
 
 /**
@@ -48,6 +48,7 @@ public class EnotecaEJB implements EnotecaEJBRemote {
     @Override
     public Vino findById(int id) {
         return em.createNamedQuery(FIND_BY_ID, Vino.class)
+                .setParameter("id", id)
                 .getSingleResult();
     }
 

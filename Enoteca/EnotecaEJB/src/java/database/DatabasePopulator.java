@@ -5,11 +5,12 @@
  */
 package database;
 
+import server.EnotecaEJB;
+import server.Vino;
 import javax.annotation.sql.DataSourceDefinition;
 import javax.ejb.Singleton;
 import javax.ejb.LocalBean;
 import javax.ejb.Startup;
-import enoteca.*;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;

@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package enotecaclient;
+package client;
 
+import server.EnotecaEJBRemote;
+import server.Vino;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import enoteca.*;
 import java.util.List;
 import java.util.Scanner;
 
@@ -23,7 +24,7 @@ public class EnotecaClient {
      */
     public static void main(String[] args) throws NamingException {
         Context ctx = (Context) new InitialContext();
-        EnotecaEJBRemote enotecaEJB = (EnotecaEJBRemote) ctx.lookup("java:global/EnotecaEJB/EnotecaEJB!enoteca.EnotecaEJBRemote");
+        EnotecaEJBRemote enotecaEJB = (EnotecaEJBRemote) ctx.lookup("java:global/EnotecaEJB/EnotecaEJB!server.EnotecaEJBRemote");
         
         Scanner scan = new Scanner(System.in);
         
