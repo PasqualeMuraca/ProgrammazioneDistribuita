@@ -7,7 +7,7 @@ public interface BabboNataleRemote {
     Bambino createBambino(Bambino bambino);
     void deleteBambino(Bambino bambino);
     Bambino updateBambino(Bambino bambino);
-    Bambino findBambinoById(int id);
+    Bambino findBambinoById(Long id);
     List<Bambino> findBambiniByStato();
     List<Bambino> findBambiniByNucleo(int nucleo);
     List<Bambino> findAllBambini();

@@ -26,16 +26,15 @@ public class MandaMessaggio {
         Scanner scan = new Scanner(System.in);
         
         System.out.println("Inserisci l'id del bambino di cui va cambiato lo stato della lettera");
-        int id = scan.nextInt();
+        Long id = scan.nextLong();
         Bambino b = babboNataleEJB.findBambinoById(id);
         b.setStato(Boolean.TRUE);
+        System.out.println(b);
         
-        // Looks up the administered objects
         ConnectionFactory connectionFactory = (ConnectionFactory) ctx.lookup("jms/javaee7/ConnectionFactory");
         Destination topic = (Destination) ctx.lookup("jms/javaee7/Topic");
 
         try (JMSContext jmsContext = connectionFactory.createContext()) {
-          // Sends an object message to the topic
           jmsContext.createProducer().setProperty("nucleo", b.getNumeroNucleo()).send(topic, b);
           System.out.println("bambino sent");          
         }

@@ -14,7 +14,7 @@ import javax.persistence.NamedQuery;
     @NamedQuery(name = FIND_ALL, query = "Select b FROM Bambino b"),
     @NamedQuery(name = FIND_BY_REQUEST, query = "SELECT b FROM Bambino b WHERE b.stato = false"),
     @NamedQuery(name = FIND_NUCLEO, query = "SELECT b FROM Bambino b WHERE b.nucleo > :nucleoMinimo"),
-    @NamedQuery(name = FIND_BY_ID, query = "SELECT b FROM Bambino b WHERE b.id > :id")
+    @NamedQuery(name = FIND_BY_ID, query = "SELECT b FROM Bambino b WHERE b.id = :id")
     
 }
 )

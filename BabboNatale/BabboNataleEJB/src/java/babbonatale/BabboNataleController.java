@@ -22,13 +22,13 @@ public class BabboNataleController implements BabboNataleRemote {
 
     @Override
     public void deleteBambino(Bambino bambino) {
-        em.merge(bambino);
+        em.remove(bambino);
     }
 
     @Override
     public Bambino updateBambino(Bambino bambino) {
     
-        em.remove(em.merge(bambino));
+        em.merge(bambino);
         return bambino;
     }
 
@@ -54,7 +54,7 @@ public class BabboNataleController implements BabboNataleRemote {
     }
 
     @Override
-    public Bambino findBambinoById(int id) {
+    public Bambino findBambinoById(Long id) {
         return em.createNamedQuery(FIND_BY_ID, Bambino.class)
                 .setParameter("id", id)
                 .getSingleResult();

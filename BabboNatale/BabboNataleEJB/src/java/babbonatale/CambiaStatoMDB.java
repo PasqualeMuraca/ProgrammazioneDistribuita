@@ -11,7 +11,6 @@ import javax.inject.Inject;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
-import javax.persistence.EntityManager;
 
 /**
  *
@@ -39,7 +38,7 @@ public class CambiaStatoMDB implements MessageListener {
             b = message.getBody(Bambino.class);
             if (b.getNumeroNucleo() > 10) {
                 b.setPriorita("SI");
-                System.out.println("Procedere con priorità qui");
+                System.out.println("Procedere con priorita' qui");
             }
             bnc.updateBambino(b);
             System.out.println("Aggiornamento effettuato");
